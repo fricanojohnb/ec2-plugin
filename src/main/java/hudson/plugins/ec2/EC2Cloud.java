@@ -125,6 +125,10 @@ public abstract class EC2Cloud extends Cloud {
         readResolve(); // set parents
     }
 
+    public String getRoleToAssume() {
+        return roleToAssume;
+    }
+
     public static String getSlaveTypeTagValue(String slaveType, String templateDescription) {
         return templateDescription != null ? slaveType + "_" + templateDescription : slaveType;
     }
